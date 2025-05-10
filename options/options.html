@@ -1,0 +1,88 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AI Summarizer Options</title>
+  <link rel="stylesheet" href="options.css">
+  <script src="options.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>AI Summarizer Settings</h1>
+    
+    <div class="form-group">
+      <label for="api-key">API Key:</label>
+      <input type="password" id="api-key" placeholder="Enter your API key">
+    </div>
+    
+    
+    <div class="form-group">
+      <label for="provider">AI Provider:</label>
+      <select id="provider">
+        <option value="claude">Claude</option>
+        <option value="openai">OpenAI</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="model">Model:</label>
+      <select id="model">
+        <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+        <option value="gpt-4">GPT-4</option>
+        <option value="claude-instant">Claude Instant</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="temperature">Temperature:</label>
+      <input type="range" id="temperature" min="0" max="1" step="0.1" value="0.7">
+      <span id="temperature-value">0.7</span>
+    </div>
+    
+    <div class="form-group">
+      <label for="default-length">Default Summary Length:</label>
+      <select id="default-length">
+        <option value="short">Short</option>
+        <option value="medium" selected>Medium</option>
+        <option value="long">Long</option>
+      </select>
+    </div> 
+    
+    <button id="save-button">Save Settings</button>
+    <div id="status-message"></div>
+  </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<body>
+  <div style="padding: 20px; max-width: 400px;">
+    <h2>Settings</h2>
+    
+    <div style="margin-bottom: 15px; margin-top: 8px;">
+      <label style="display: block; margin-bottom: 5px;">
+        <p style="margin-bottom: 5px;">API Key:</p>
+        <input type="password" id="cohereKey" style="width: 100%; padding: 5px;">
+      </label>
+      <small>Get your key at <a href="https://dashboard.cohere.com/api-keys" target="_blank">Cohere Dashboard</a></small>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+      <label style="display: block; margin-bottom: 5px;">
+        <p style="margin-bottom: 5px;">Default Summary Length:</p>
+        <select id="summaryLength" style="width: 100%; padding: 5px;">
+          <option value="short">Short (1-2 sentences)</option>
+          <option value="medium" selected>Medium (3-5 sentences)</option>
+          <option value="long">Long (6-8 sentences)</option>
+        </select>
+      </label>
+    </div>
+
+    <button id="saveBtn" style="padding: 8px 15px; background: #007bff; color: white; border: none;">Save Settings</button>
+    <div id="status" style="margin-top: 10px; color: green;"></div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

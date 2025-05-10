@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "AI Content Summarizer",
+  "version": "1.0",
+  "description": "Summarize web content using Artificial Intelligence",
+  "icons": {
+    "16": "icons/digital-icon16.png",
+    "48": "icons/digital-icon48.png",
+    "128": "icons/digital-icon128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/digital-icon16.png",
+      "48": "icons/digital-icon48.png",
+      "128": "icons/digital-icon128.png"
+    }
+  },
+  "options_page": "options/options.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles/extension_styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "contextMenus",
+    "scripting",
+    "cookies"
+  ],
+  "host_permissions": [
+    "*://*/*",
+    "https://api.cohere.ai/*"
+  ],
+  "web_accessible_resources": [{
+    "resources": ["config/*"],
+    "matches": ["<all_urls>"]
+  }]
+}
