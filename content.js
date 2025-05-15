@@ -124,7 +124,7 @@ function showSummaryUI(summary, text, initialLength) {
   });
 
   // Initial generation if needed
-  if (summary === 'Generating summary...') {
+  if (summary === 'Generating new summary...') {
     generateSummary(text, initialLength)
       .then(newSummary => {
         contentDiv.textContent = newSummary;
