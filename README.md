@@ -58,8 +58,10 @@ To generate and manage summaries the following steps can be followed:
 - **Generate a summary**
 
   1. Select the text you want to summarize
-  2. Right-click and select "Summarize selection" from the context menu ![highlight text & context menu](./screenshots/highlight_context_menu.png)
-  3. A summary of the length set from the options page (short in this case) is generated and displayed on the screen ![summary generator](./screenshots/short_summary.png)
+  2. Right-click and select "Summarize selection" from the context menu
+     ![highlight text & context menu](./screenshots/highlight_context_menu.png)
+  3. A summary of the length set from the options page (short in this case) is generated and displayed on the screen
+     ![summary generator](./screenshots/short_summary.png)
 
 - **Regenerate summary by adjusting summary length**:
 
@@ -67,8 +69,10 @@ To generate and manage summaries the following steps can be followed:
      - Short (1-2 sentences)
      - Medium (3-5 sentences)
      - Long (6-8 sentences)
-  2. The extension will regenerate the summary ![switch summary length](./screenshots/new_summary.png)
-  3. The newly generated content is displayed: ![medium summary](./screenshots/medium_summary.png)
+  2. The extension will regenerate the summary
+     ![switch summary length](./screenshots/new_summary.png)
+  3. The newly generated content is displayed:
+     ![medium summary](./screenshots/medium_summary.png)
 
 - **Copy, save and manage summaries**
   - Click 'Copy' button to save the summary to clipboard
