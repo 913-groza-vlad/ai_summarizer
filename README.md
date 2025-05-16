@@ -59,9 +59,13 @@ To generate and manage summaries the following steps can be followed:
 
   1. Select the text you want to summarize
   2. Right-click and select "Summarize selection" from the context menu
+     
      ![highlight text & context menu](./screenshots/highlight_context_menu.png)
+     
   3. A summary of the length set from the options page (short in this case) is generated and displayed on the screen
+     
      ![summary generator](./screenshots/short_summary.png)
+     
 
 - **Regenerate summary by adjusting summary length**:
 
@@ -70,17 +74,21 @@ To generate and manage summaries the following steps can be followed:
      - Medium (3-5 sentences)
      - Long (6-8 sentences)
   2. The extension will regenerate the summary
+     
      ![switch summary length](./screenshots/new_summary.png)
   3. The newly generated content is displayed:
+      
      ![medium summary](./screenshots/medium_summary.png)
 
 - **Copy, save and manage summaries**
   - Click 'Copy' button to save the summary to clipboard
   - Click 'Save' button to store the content in the history list, which contains previously saved summaries (A message can be seen if the save action is completed successfully)
   - Access saved summaries by clicking on the extension icon. A popup appears where we can visualize the summaries stored. These elements can be expanded to view the full summary text, but we can also delete a summary if it is not needed anymore
+    
     ![extension popup](./screenshots/popup_extension.png)
 - **Error handling**:
   If there is an error when we try to generate a summary, a clear error message is displayed, so the user is aware of the reason for which the content was not generated. Usually, the errors are caused by exceeding the usage limit in case of a trial key and by setting an incorrect key or not setting a key at all (this is the situation in the image below).
+  
   ![error handling](./screenshots/error_handling.png)
 
 ## Support
