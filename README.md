@@ -77,6 +77,7 @@ To generate and manage summaries the following steps can be followed:
      ![switch summary length](./screenshots/new_summary.png)
 
   3. The newly generated content is displayed:
+
      ![medium summary](./screenshots/medium_summary.png)
 
 - **Copy, save and manage summaries**
@@ -221,7 +222,7 @@ In `popup.js`, we handle the extension's popup interface and history operations:
 - Displays recent summaries with timestamps
 - Auto-updates when new summaries are saved
 
-✔ Interactive Controls\*
+✔ Interactive Controls
 
 - Expand/collapse long summaries
 - One-click deletion
