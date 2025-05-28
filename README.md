@@ -8,7 +8,7 @@ Purpose: Quickly generate summaries (in English) of selected webpage text
 
 ✨ Key Features of the extension:
 
-- **Right-click context menu integration**
+- **Context menu integration**
 - **Customizable summary lengths (short/medium/long)**
 - **Multilingual support (output summary in English)**
 - **Summary history tracking**
@@ -100,7 +100,7 @@ To generate and manage summaries the following steps can be followed:
 Extension setup and permissions:
 
 - manifest_version: 3 (Modern Chrome Extensions API)
-- name/description: Publicly visible in Chrome Web Store
+- name/description: Publicly visible in Chrome Web Store (when/if it is published)
 - icons: Responsive sizes for Chrome UI (toolbar, menus, store)
 
 #### Key Components
@@ -225,7 +225,7 @@ In `popup.js`, we handle the extension's popup interface and history operations:
 ✔ Interactive Controls
 
 - Expand/collapse long summaries
-- One-click deletion
+- One-click deletion (users can delete summaries cards from the list without having displayed a confirmation message)
 
 ✔ Storage Sync
 
