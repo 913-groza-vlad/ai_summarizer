@@ -46,7 +46,7 @@ After installation:
 
 - Click the extension icon (🧩) in Chrome's toolbar
 - Select "Options"
-- Enter your Cohere API key (a trial key can be generated from Cohere Dashboard)
+- Enter your Cohere API key (a trial key can be generated from [Cohere Dashboard](https://dashboard.cohere.com/api-keys))
 - Configure default summary length
 
 ![options_page](./screenshots/options_page.png)
