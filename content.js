@@ -45,7 +45,7 @@ function showSummaryUI(summary, text, initialLength) {
     </div>
     <div class="ai-summarizer-content">${summary}</div>
     <div class="ai-summarizer-footer">
-      <select class="length-selector">
+      <select class="length-selector" style="width: 150px; margin-right: 20px;">
         <option value="short" ${initialLength === 'short' ? 'selected' : ''}>Short</option>
         <option value="medium" ${initialLength === 'medium' ? 'selected' : ''}>Medium</option>
         <option value="long" ${initialLength === 'long' ? 'selected' : ''}>Long</option>
@@ -56,6 +56,38 @@ function showSummaryUI(summary, text, initialLength) {
   `;
 
   document.body.appendChild(container);
+
+  const header = container.querySelector('.ai-summarizer-header');
+  let isDragging = false;
+  let offsetX, offsetY;
+
+  // Mouse down event to start dragging
+  header.addEventListener('mousedown', (e) => {
+    if (e.target.classList.contains('close-button')) return;
+    
+    isDragging = true;
+    offsetX = e.clientX - container.getBoundingClientRect().left;
+    offsetY = e.clientY - container.getBoundingClientRect().top;
+    
+    container.style.cursor = 'grabbing';
+    container.style.userSelect = 'none';
+  });
+
+  // Mouse move event for dragging
+  document.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    
+    container.style.position = 'fixed';
+    container.style.left = `${e.clientX - offsetX}px`;
+    container.style.top = `${e.clientY - offsetY}px`;
+  });
+
+  // Mouse up to stop dragging
+  document.addEventListener('mouseup', () => {
+    isDragging = false;
+    container.style.cursor = '';
+    container.style.userSelect = '';
+  });
 
   // Get button references
   const copyBtn = container.querySelector('.copy-button');

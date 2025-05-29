@@ -21,6 +21,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: grab;
+  user-select: none;
+}
+
+.ai-summarizer-header:active {
+  cursor: grabbing;
 }
 
 .ai-summarizer-header h3 {

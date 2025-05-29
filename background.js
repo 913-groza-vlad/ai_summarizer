@@ -17,15 +17,25 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   if (info.menuItemId === "summarize-selection" && info.selectionText) {
     const { summaryLength } = await chrome.storage.sync.get(['summaryLength']);
     
-    chrome.scripting.executeScript({
-      target: { tabId: tab.id },
-      files: ['content.js']
-    }).then(() => {
-      chrome.tabs.sendMessage(tab.id, {
-        action: "summarize",
-        text: info.selectionText,
-        length: summaryLength || 'medium'
-      });
+    chrome.tabs.sendMessage(tab.id, {
+      action: "summarize",
+      text: info.selectionText,
+      length: summaryLength || 'medium'
+    }, (response) => {
+      if (chrome.runtime.lastError) {
+        // Content script not injected yet, so do it
+        chrome.scripting.executeScript({
+          target: { tabId: tab.id },
+          files: ['content.js']
+        }).then(() => {
+          // Now retry the message
+          chrome.tabs.sendMessage(tab.id, {
+            action: "summarize",
+            text: info.selectionText,
+            length: summaryLength || 'medium'
+          });
+        });
+      }
     });
   }
 });
