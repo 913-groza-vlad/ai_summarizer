@@ -217,6 +217,28 @@ The code in the `options.js` file handles the options page's functionality with 
 
 In `popup.js`, we handle the extension's popup interface and history operations:
 
+```javascript
+document.addEventListener('DOMContentLoaded', () => {
+  const historyList = document.getElementById('history-list');
+  const optionsButton = document.getElementById('options-button');
+
+  // Load history
+  loadHistory();
+
+  // Options button
+  optionsButton.addEventListener('click', () => {
+    chrome.runtime.openOptionsPage();
+  });
+
+  // Listen for history updates
+  chrome.storage.onChanged.addListener((changes) => {
+    if (changes.history) {
+      loadHistory();
+    }
+  });
+});
+```
+
 ✔ Dynamic Loading
 
 - Displays recent summaries with timestamps
